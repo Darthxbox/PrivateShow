@@ -7,6 +7,8 @@
 #include <iostream>
 #include <dirent.h>
 #include <vector>
+#include <windows.h>
+#include <Lmcons.h>
 
 using namespace std;
 
@@ -14,5 +16,7 @@ class IOHandler{
 private:
 public:
     void createDirectory(string title);
+    string getUsername();
+    string setRoamingDirectory();
 };
 #endif //PRIVATESHOW_IO_H

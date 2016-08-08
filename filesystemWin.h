@@ -4,11 +4,14 @@
 
 #ifndef PRIVATESHOW_IO_H
 #define PRIVATESHOW_IO_H
-#include <iostream>
-#include <dirent.h>
-#include <vector>
+
+
 #include <windows.h>
 #include <Lmcons.h>
+#include <dirent.h>
+#include <iostream>
+#include <vector>
+
 
 using namespace std;
 

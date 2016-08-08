@@ -1,10 +1,18 @@
-
-#include <io.h>
-#include <vector>
-#include <sstream>
-#include <string>
-#include "ffmpeg.h"
+#ifdef _WIN32
 #include "filesystemWin.h"
+#endif
+
+#ifdef _linux
+#endif
+
+#ifdef _APPLE_
+#include <TargetConditionals.h>
+#endif
+
+
+#include <sstream>
+#include "ffmpeg.h"
+
 
 using namespace std;
 
@@ -35,6 +43,7 @@ int main(int argc, char **argv) {
     ff.generateThumbs(timestamp, ffmpeg_path, input, sDirectory, baseFileName, amount);
 
    // system( ("ffprobe.exe "+filename+" -show_entries format=duration -v quiet -of csv='p=0'").c_str() );
+    system ((ffmpeg_path+"ffplay.exe " + input).c_str());
     return 0;
 }
 

@@ -12,8 +12,6 @@ vector<string> split(string input, char delimiter);
 string getFileNameWithoutExtension(vector<string> input);
 string getFileNameWithExtension(vector<string> input);
 
-vector<string> open(string path = ".");
-
 int main() {
     string input = "StarWars.mp4";
     string timestamp = "00:00:14.435";
@@ -68,13 +66,3 @@ string getFileNameWithExtension(vector<string> input){
 
 
 
-vector<string> open(string path = ".") {
-    DIR* dir;
-    dirent* pdir;
-    vector<std::string> files;
-    dir = opendir(path.c_str());
-    while (pdir = readdir(dir)) {
-        files.push_back(pdir->d_name);
-    }
-    return files;
-}

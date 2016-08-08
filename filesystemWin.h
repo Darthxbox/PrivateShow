@@ -6,6 +6,7 @@
 #define PRIVATESHOW_IO_H
 #include <iostream>
 #include <dirent.h>
+#include <vector>
 
 using namespace std;
 
